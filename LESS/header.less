@@ -1,0 +1,30 @@
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  z-index: 999;
+
+  @media @desktop {
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo {
+    z-index: 999;
+    font-size: 2rem;
+    transition: 0 ease-in-out;
+  }
+
+  .nav-btn {
+    z-index: 999;
+
+    @media @desktop {
+      display: none;
+    }
+  }
+}

@@ -1,6 +1,41 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  font-size: 62.5%;
+}
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3%;
+  font-size: 2rem;
+  color: #fcf9ED;
+}
+@media (min-width: 800px) {
+  .container {
+    width: 860px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.5rem;
+    border: 1px solid red;
+  }
+}
+.container .logo {
+  height: 50px;
+  width: 40px;
+  border-radius: 16px;
+  background-color: #fcf9ed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.container .logo span {
+  color: #FFBA5A;
+  font-family: Arial;
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 100%;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -128,4 +163,136 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFBA5A;
+}
+.bg .home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  font-size: 2rem;
+}
+@media (min-width: 800px) {
+  .bg .home-content {
+    padding: 13%;
+    height: 100%;
+    align-items: flex-start;
+  }
+}
+.bg .home-content .sub-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .bg .home-content .sub-heading {
+    display: block;
+  }
+}
+.bg .home-content .sub-heading h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 20px;
+  padding: 5px;
+}
+.bg .home-content .sub-heading p {
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media (min-width: 800px) {
+  .bg .home-content .sub-heading p {
+    text-align: left;
+  }
+}
+.bg .home-content .sub-heading button {
+  width: 80%;
+  background-color: #fcf9ED;
+  padding: 20px;
+  margin: 10%;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #FFBA5A;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 800px) {
+  .bg .home-content .sub-heading button {
+    width: 30%;
+    float: right;
+  }
+}
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  z-index: 999;
+}
+@media (min-width: 800px) {
+  .topbar {
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.topbar .logo {
+  z-index: 999;
+  font-size: 2rem;
+  transition: 0 ease-in-out;
+}
+.topbar .nav-btn {
+  z-index: 999;
+}
+@media (min-width: 800px) {
+  .topbar .nav-btn {
+    display: none;
+  }
+}
+.navlinks {
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 0%;
+  height: 100%;
+  background-color: #2D283D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+@media (min-width: 800px) {
+  .navlinks {
+    position: unset;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    background-color: transparent;
+    margin-left: 30px;
+  }
+}
+.navlinks .nav-link {
+  text-decoration: none;
+  opacity: 0;
+  color: #fcf9ED;
+  padding: 4%;
+}
+@media (min-width: 800px) {
+  .navlinks .nav-link {
+    opacity: 1;
+  }
+}
+.navlinks .active {
+  text-decoration: underline;
+  text-decoration-color: #fcf9ED;
 }
