@@ -1,0 +1,59 @@
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: @primary-color;
+
+  .home-content {
+    .flex(column, center, center);
+    width: 100%;
+    height: 90vh;
+    font-size: 2rem;
+
+    @media @desktop {
+      padding: 13%;
+      height: 100%;
+      align-items: flex-start;
+    }
+
+    .sub-heading {
+      .flex(column, flex-start, center);
+
+      @media @desktop {
+        display: block;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 20px;
+        padding: 5px;
+      }
+
+      p {
+        width: 80%;
+        text-align: center;
+        font-size: 1.5rem;
+
+        @media @desktop {
+          text-align: left;
+        }
+      }
+
+      button {
+        width: 80%;
+        background-color: @greyscale;
+        padding: 20px;
+        margin: 10%;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: @primary-color;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        @media @desktop {
+          width: 30%;
+          float: right;
+        }
+      }
+    }
+  }
+}
