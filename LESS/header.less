@@ -1,27 +1,43 @@
 .topbar {
-  width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
   padding: 3%;
+  width: 100%;
   z-index: 999;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
 
   @media @desktop {
     position: relative;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .logo {
+    width: 40px;
+    height: 50px;
     z-index: 999;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
     transition: 0 ease-in-out;
+    .flex(row, center, center);
+    background-color: @greyscale;
+
+    @media @desktop {
+      font-size: @small-font;
+    }
+
+    span {
+      color: @primary-color;
+      font-weight: bold;
+      line-height: 100%;
+    }
   }
 
   .nav-btn {
     z-index: 999;
+    font-size: @text-font;
 
     @media @desktop {
       display: none;
