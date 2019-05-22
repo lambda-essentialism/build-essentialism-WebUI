@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <link rel="stylesheet" href="css/index.css">
 
@@ -18,26 +19,44 @@
 
 <body>
   <div class="bg">
+    <header class="home-topbar">
+      <h1 class="logo"><span>ES<br>SE</span></h1>
+      <div href="#" class=" fas fa-bars nav-btn"></div>
+      <nav class="navlinks">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link login" href="#">Login</a>
+      </nav>
+    </header>
     <div class="container">
       <div class="pattern-container">
         <div class="square-pattern"></div>
       </div>
-      <header class="topbar">
-        <h1 class="logo"><span>ES<br>SE</span></h1>
-        <div href="#" class=" fas fa-bars nav-btn"></div>
-        <nav class="navlinks">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-          <a class="nav-link login" href="#">Login</a>
-        </nav>
-      </header>
 
       <section class="home-content">
         <div class="sub-heading">
           <h2>ESSE</h2>
           <p>The disciplined pursuit of less, so you can get more.</p>
-          <button>Join the Pursuit</button>
+          <a href="https://essentialismapp.netlify.com">Join the Pursuit</a>
+        </div>
+      </section>
+
+      <section class="home-cards">
+        <h2>Identify Your Values</h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="assets/design-flow.svg" alt="">
+            <p>Organizing</p>
+          </div>
+          <div class="card">
+            <img src="assets/plan-creation.svg" alt="">
+            <p>Creativity</p>
+          </div>
+          <div class="card">
+            <img src="assets/productivity.svg" alt="">
+            <p>Productivity</p>
+          </div>
         </div>
       </section>
     </div>
