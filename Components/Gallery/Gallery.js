@@ -1,3 +1,12 @@
+const teamMembers = [
+  { name: 'Eileen Cuevas', role: 'Team Lead', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UB0EQ6VR9-be0cd63ad566-72'},
+  { name: 'Marlene Salangsang', role: 'UX/UI Designer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UG1BSJV4J-3f2ddcbd7f67-72' },
+  { name: 'Jason Prince', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UH0CJC1S6-bfbf4e8b9519-72' },
+  { name: 'Noble Obioma', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UJ28HMZ9C-67cb841769a9-72' },
+  { name: 'Raymond Pugh', role: 'Front-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFJBRHKJ9-0a535d3d1abe-72'},
+  { name: 'Garrett Weems', role: 'Back-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFMLDRQ3S-76a0616dcea8-72' },
+];
+
 class Gallery {
   constructor(array) {
     this.members = array;
@@ -56,14 +65,5 @@ class Gallery {
     return newMembers;
   }
 }
-
-const teamMembers = [
-  { name: 'Eileen Cuevas', role: 'Team Lead', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UB0EQ6VR9-be0cd63ad566-72'},
-  { name: 'Marlene Salangsang', role: 'UX/UI Designer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UG1BSJV4J-3f2ddcbd7f67-72' },
-  { name: 'Jason Prince', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UH0CJC1S6-bfbf4e8b9519-72' },
-  { name: 'Noble Obioma', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UJ28HMZ9C-67cb841769a9-72' },
-  { name: 'Raymond Pugh', role: 'Front-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFJBRHKJ9-0a535d3d1abe-72'},
-  { name: 'Garrett Weems', role: 'Back-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFMLDRQ3S-76a0616dcea8-72' },
-];
 
 const teamGallery = new Gallery(teamMembers);

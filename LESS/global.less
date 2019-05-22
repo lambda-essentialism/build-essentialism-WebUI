@@ -4,8 +4,12 @@
 
 html,
 body {
-  font-size: 85%;
+  width: 100%;
+  height: 100%;
+  font-size: 55%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: @primary-color;
+  scroll-behavior: smooth;
 
   @media @desktop {
     font-size: 62.5%;
@@ -14,14 +18,40 @@ body {
 
 .container {
   padding: 3%;
+  padding-bottom: 5%;
   height: 100%;
   color: @greyscale;
 
   @media @desktop {
+    padding: 0;
     width: 860px;
     margin: 0 auto;
-    padding: 0;
   }
+
+  .pattern-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    display: none;
+    position: absolute;
+    justify-content: flex-end;
+    z-index: 500;
+
+    @media @desktop {
+      left: auto;
+      width: inherit;
+      display: flex;
+    }
+
+    .square-pattern {
+      width: 370px;
+      background-repeat: no-repeat;
+      background-image: url('../assets/square-pattern.png');
+    }
+  } // pattern-container
 }
 
 // div, span, section, nav, header, body {
