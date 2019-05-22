@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   width: 0%;
-  z-index: 1;
+  z-index: 999;
   height: 100%;
   position: fixed;
   .flex(column, center, center);
@@ -12,8 +12,9 @@
     width: 55%;
     position: unset;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: transparent;
+    justify-content: space-between;
+    background-color: @primary-color;
+    margin-left: 10%;
   }
 
   .nav-link {
