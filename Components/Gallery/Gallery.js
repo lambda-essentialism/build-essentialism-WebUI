@@ -1,10 +1,40 @@
 const teamMembers = [
-  { name: 'Eileen Cuevas', role: 'Team Lead', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UB0EQ6VR9-be0cd63ad566-72'},
-  { name: 'Marlene Salangsang', role: 'UX/UI Designer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UG1BSJV4J-3f2ddcbd7f67-72' },
-  { name: 'Jason Prince', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UH0CJC1S6-bfbf4e8b9519-72' },
-  { name: 'Noble Obioma', role: 'UI Developer', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UJ28HMZ9C-67cb841769a9-72' },
-  { name: 'Raymond Pugh', role: 'Front-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFJBRHKJ9-0a535d3d1abe-72'},
-  { name: 'Garrett Weems', role: 'Back-end Enginner', avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFMLDRQ3S-76a0616dcea8-72' },
+  {
+    name: 'Eileen Cuevas',
+    role: 'Team Lead',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UB0EQ6VR9-be0cd63ad566-72',
+    git: 'eeileencuevas'
+  },
+  {
+    name: 'Marlene Salangsang',
+    role: 'UX/UI Designer',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UG1BSJV4J-3f2ddcbd7f67-72',
+    git: 'marlenesalangsang'
+  },
+  {
+    name: 'Jason Prince',
+    role: 'UI Developer',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UH0CJC1S6-bfbf4e8b9519-72',
+    git: 'EndersGame1977'
+  },
+  {
+    name: 'Noble Obioma',
+    role: 'UI Developer',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UJ28HMZ9C-67cb841769a9-72',
+    git: 'nobioma1'
+  },
+  {
+    name: 'Raymond Pugh',
+    role: 'Front-end Enginner',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFJBRHKJ9-0a535d3d1abe-72',
+    git: 'raypugh07'
+  },
+  {
+    name: 'Garrett Weems',
+    role: 'Back-end Enginner',
+    avatar: 'https://ca.slack-edge.com/T4JUEB3ME-UFMLDRQ3S-76a0616dcea8-72',
+    git: 'glweens'
+  }
 ];
 
 class Gallery {
@@ -16,12 +46,12 @@ class Gallery {
 
   appendNewMembers() {
     const newMembersArray = this.createNewMember();
-    newMembersArray.forEach(item => this.gallerySection.appendChild(item))
+    newMembersArray.forEach(item => this.gallerySection.appendChild(item));
   }
 
   createAvatar(imageLink) {
     const avatar = document.createElement('div');
-    avatar.classList.add('avatar')
+    avatar.classList.add('avatar');
 
     const image = document.createElement('img');
     image.setAttribute('src', imageLink);
@@ -30,37 +60,43 @@ class Gallery {
     return avatar;
   }
 
-  createInfo(name, role) {
+  createInfo(name, role, userLink) {
     let info = document.createElement('div');
-    info.classList.add('info')
-    
+    info.classList.add('info');
+
     let nameDiv = document.createElement('p');
-    nameDiv.classList.add('name')
+    nameDiv.classList.add('name');
     nameDiv.textContent = name;
     info.appendChild(nameDiv);
-    
+
+    let git = document.createElement('a');
+    git.classList.add('fab');
+    git.classList.add('fa-github');
+    git.setAttribute('href', `https://github.com/${userLink}`)
+    nameDiv.appendChild(git);
+
     let roleDiv = document.createElement('p');
-    roleDiv.classList.add('role')
+    roleDiv.classList.add('role');
     roleDiv.textContent = role;
     info.appendChild(roleDiv);
 
     return info;
   }
 
-  createNewMember(){
+  createNewMember() {
     const newMembers = this.members.map(item => {
       let newMember = document.createElement('div');
       newMember.setAttribute('data-aos', 'zoom-in-up');
       newMember.classList.add('member');
 
       let image = this.createAvatar(item.avatar);
-      newMember.appendChild(image)
+      newMember.appendChild(image);
 
-      let info = this.createInfo(item.name, item.role);
+      let info = this.createInfo(item.name, item.role, item.git);
       newMember.appendChild(info);
 
       return newMember;
-    })
+    });
 
     return newMembers;
   }

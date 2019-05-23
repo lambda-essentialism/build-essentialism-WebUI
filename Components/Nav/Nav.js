@@ -1,4 +1,7 @@
 const appHost = 'https://essentialismapp.netlify.com';
+const signUp = `${appHost}/registration`;
+const loginLink = document.querySelector('.login').href = appHost;
+const signUpLink = document.querySelector('.join').href = signUp;
 
 class Nav {
   constructor(element) {
@@ -6,7 +9,6 @@ class Nav {
     this.navLinks = this.element.querySelectorAll('.nav-link');
     this.navBtn = document.querySelector('.nav-btn');
     this.navBtn.addEventListener('click', () => this.toogleSidebar());
-    this.login = document.querySelector('.login').href = appHost;
     this.isOpen = false;
   }
 
@@ -16,7 +18,6 @@ class Nav {
         width: '100%',
         onComplete: () => {
           this.navBtn.classList.replace('fa-bars', 'fa-times');
-          this.navBtn.style.color = '#fcf9ED';
         }
       });
       this.navLinks.forEach(nav => {
@@ -30,7 +31,6 @@ class Nav {
         delay: 0.48,
         width: '0%',
         onComplete: () => {
-          this.navBtn.style.color = '#2D283D';
           this.navBtn.classList.replace('fa-times', 'fa-bars');
         }
       });
