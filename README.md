@@ -1,7 +1,7 @@
 # Project Week - User Interface
 
-  Project Name - "Essentialism"
-  Role - WEB UI Developer (Design a landing page)
+  - Project Name - "Essentialism"
+  - Role - WEB UI Developer (Design a landing page)
 
 ## Pitch:
 
