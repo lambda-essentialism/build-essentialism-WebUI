@@ -1,0 +1,142 @@
+.contact-content {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30%;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
+
+  @media @desktop {
+    width: 593px;
+    padding: 20px 0%;
+    margin-top: 30%;
+  }
+
+  .form-card {
+    .flex(column, center, center);
+
+    @media @desktop {
+      justify-self: flex-start;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: @text-color;
+      font-weight: bold;
+      margin: 5% 0;
+
+      @media @desktop {
+        font-size: @medium-font;
+      }
+    }
+
+    form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 500;
+      width: 80%;
+
+      @media @desktop {
+        z-index: 999;
+      }
+
+      label {
+        width: 100%;
+        font-size: @small-font;
+        padding: 5% 0%;
+      }
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0.42;
+
+        @media @desktop {
+          flex-direction: row;
+        }
+
+        input {
+          width: 100%;
+          border-bottom: 1px solid @text-color;
+          margin-bottom: 20px;
+
+          &:focus {
+            outline: none;
+          }
+
+          @media @desktop {
+            width: 40%;
+          }
+        }
+      }
+
+      .number {
+        width: 100%;
+        opacity: 0.42;
+
+        @media @desktop {
+          width: 40%;
+        }
+
+        input {
+          border-bottom: 1px solid @text-color;
+          
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .reason {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          justify-self: left;
+          color: @text-color;
+          font-weight: lighter;
+          text-align: left;
+        }
+
+        textarea {
+          opacity: 0.42;
+          border: none;
+          line-height: 25px;
+          background-image: linear-gradient(
+            transparent,
+            transparent 24px,
+            @text-color 0px
+          );
+          background-size: 100% 25px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+      }
+      
+      button {
+        border: 1px solid @text-color;
+        background-color: transparent;
+        border-radius: 10px;
+        margin: 4% 0;
+        height: 40px;
+        font-size: @small-font;
+        transition: .6s;
+
+        &:hover {
+          color: @greyscale;
+          background-color: @text-color;
+        }
+        
+        @media @desktop {
+          width: 87px;
+          margin: 0;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
