@@ -82,7 +82,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -134,7 +135,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 55%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   background-color: #FFBA5A;
   scroll-behavior: smooth;
 }
@@ -149,6 +150,7 @@ body {
   padding-bottom: 5%;
   height: 100%;
   color: #fcf9ED;
+  opacity: 0;
 }
 @media (min-width: 800px) {
   .container {
@@ -189,7 +191,6 @@ body {
   width: 100%;
   height: 55vh;
   margin-top: 20%;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,19 +252,22 @@ body {
   text-decoration: none;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in;
 }
 .bg .container .home-content .sub-heading a:hover {
-  animation: bounce 0.25s 2 linear alternate;
+  animation: bounce 0.4s 4 linear alternate;
+  background-color: #2D283D;
+  color: #fcf9ED;
 }
 @keyframes bounce {
   0% {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(3deg);
+    transform: rotate(10deg);
   }
   100% {
-    transform: rotate(-3deg);
+    transform: rotate(-10deg);
   }
 }
 @media (min-width: 800px) {
@@ -282,10 +286,12 @@ body {
   color: #2D283D;
   padding: 10px;
   background-color: #fcf9ED;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 800px) {
   .bg .container .home-cards {
+    display: flex;
+    flex-direction: column;
     width: 85%;
     margin: 0 10%;
     margin-bottom: 10%;
@@ -357,6 +363,7 @@ body {
   }
 }
 .home-topbar .logo {
+  position: relative;
   width: 40px;
   height: 50px;
   z-index: 999;
@@ -393,14 +400,14 @@ body {
   top: 0;
   left: 0;
   width: 0%;
-  z-index: 999;
+  z-index: 950;
   height: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2D283D;
+  background-color: white;
 }
 @media (min-width: 800px) {
   .navlinks {
@@ -418,12 +425,15 @@ body {
   color: #fcf9ED;
   text-decoration: none;
   font-size: 2.5rem;
-  text-shadow: 0.5px 0.5px #2D283D;
+  color: #FFBA5A;
+  font-weight: bold;
 }
 @media (min-width: 800px) {
   .navlinks .nav-link {
     opacity: 1;
     padding: 1.5% 0;
+    color: #fcf9ED;
+    font-weight: lighter;
   }
 }
 .navlinks .active {
@@ -437,7 +447,6 @@ body {
   border-radius: 5px;
 }
 .page-index .item {
-  border: 1px solid #FFBA5A;
   font-size: 2rem;
 }
 .about-container {
@@ -445,9 +454,13 @@ body {
 }
 @media (min-width: 800px) {
   .about-container {
-    margin-top: 10%;
     background-color: transparent;
   }
+}
+.about-container h2 {
+  color: #2D283D;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 .about-container .main-about {
   width: 100%;
@@ -457,7 +470,8 @@ body {
 }
 @media (min-width: 800px) {
   .about-container .main-about {
-    margin-top: 30%;
+    margin-top: 15%;
+    margin-bottom: 20%;
     flex-direction: row;
     padding-right: 30%;
   }
@@ -465,10 +479,19 @@ body {
 .about-container .main-about .img-content {
   display: flex;
   align-items: center;
-  width: 30%;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+@media (min-width: 800px) {
+  .about-container .main-about .img-content {
+    width: 30%;
+  }
 }
 .about-container .main-about .img-content img {
-  display: none;
+  display: inherit;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .about-container .main-about .img-content img {
@@ -478,39 +501,49 @@ body {
 }
 .about-container .main-about .text-content {
   width: 100%;
+  line-height: 29px;
   border: 1px solid #fcf9ED;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+  background-color: #fcf9ED;
 }
 @media (min-width: 800px) {
   .about-container .main-about .text-content {
     width: 70%;
     margin-left: 5%;
-    padding: 5px;
+    padding: 15px;
   }
 }
 .about-container .main-about h2 {
   font-size: 3.5rem;
   padding: 8px 0;
+  color: #2D283D;
   font-weight: bold;
 }
 .about-container .main-about p {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #2D283D;
+  text-align: justify;
 }
 #team {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  width: 100%;
   padding-right: 0;
+}
+#team h2 {
+  text-align: center;
 }
 #team .gallery {
   display: flex;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
   flex-wrap: wrap;
-  border: 1px solid #fcf9ED;
-  justify-content: space-between;
+  background-color: #fcf9ED;
+  justify-content: space-around;
   border-radius: 3px;
-  padding: 10%;
   width: 100%;
+  padding-top: 5%;
+  margin-bottom: 50px;
 }
 #team .gallery .member {
   width: 250px;
@@ -530,6 +563,7 @@ body {
 }
 #team .gallery .member .info {
   justify-self: flex-end;
+  color: #2D283D;
 }
 #team .gallery .member .info .name {
   text-align: center;
@@ -537,7 +571,144 @@ body {
   padding-bottom: 5px;
   font-size: 2rem;
 }
+#team .gallery .member .info .name a {
+  text-decoration: none;
+  padding: 10px;
+  color: #FFBA5A;
+}
 #team .gallery .member .info .role {
   text-align: center;
   font-size: 1.5rem;
+}
+.contact-content {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30%;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 800px) {
+  .contact-content {
+    width: 593px;
+    padding: 20px 0%;
+    margin-top: 30%;
+  }
+}
+.contact-content .form-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card {
+    justify-self: flex-start;
+  }
+}
+.contact-content .form-card h2 {
+  font-size: 2.5rem;
+  color: #2D283D;
+  font-weight: bold;
+  margin: 5% 0;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card h2 {
+    font-size: 3.5rem;
+  }
+}
+.contact-content .form-card form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
+  width: 80%;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card form {
+    z-index: 999;
+  }
+}
+.contact-content .form-card form label {
+  width: 100%;
+  font-size: 2rem;
+  padding: 5% 0%;
+}
+.contact-content .form-card form .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0.42;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card form .name {
+    flex-direction: row;
+  }
+}
+.contact-content .form-card form .name input {
+  width: 100%;
+  border-bottom: 1px solid #2D283D;
+  margin-bottom: 20px;
+}
+.contact-content .form-card form .name input:focus {
+  outline: none;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card form .name input {
+    width: 40%;
+  }
+}
+.contact-content .form-card form .number {
+  width: 100%;
+  opacity: 0.42;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card form .number {
+    width: 40%;
+  }
+}
+.contact-content .form-card form .number input {
+  border-bottom: 1px solid #2D283D;
+}
+.contact-content .form-card form .number input:focus {
+  outline: none;
+}
+.contact-content .form-card form .reason {
+  display: flex;
+  flex-direction: column;
+}
+.contact-content .form-card form .reason p {
+  justify-self: left;
+  color: #2D283D;
+  font-weight: lighter;
+  text-align: left;
+}
+.contact-content .form-card form .reason textarea {
+  opacity: 0.42;
+  border: none;
+  line-height: 25px;
+  background-image: linear-gradient(transparent, transparent 24px, #2D283D 0px);
+  background-size: 100% 25px;
+}
+.contact-content .form-card form .reason textarea:focus {
+  outline: none;
+}
+.contact-content .form-card form button {
+  border: 1px solid #2D283D;
+  background-color: transparent;
+  border-radius: 10px;
+  margin: 4% 0;
+  height: 40px;
+  font-size: 2rem;
+  transition: 0.6s;
+}
+.contact-content .form-card form button:hover {
+  color: #fcf9ED;
+  background-color: #2D283D;
+}
+@media (min-width: 800px) {
+  .contact-content .form-card form button {
+    width: 87px;
+    margin: 0;
+    align-self: flex-end;
+  }
 }
