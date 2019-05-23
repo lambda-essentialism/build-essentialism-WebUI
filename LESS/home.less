@@ -63,21 +63,8 @@
           transition: .4s ease-in;
 
           &:hover {
-            animation: bounce 0.4s 4 linear alternate;
             background-color: @text-color;
             color: @greyscale;
-          }
-
-          @keyframes bounce {
-            0% {
-              transform: rotate(0deg);
-            }
-            50% {
-              transform: rotate(10deg);
-            }
-            100% {
-              transform: rotate(-10deg);
-            }
           }
 
           @media @desktop {
@@ -97,8 +84,8 @@
       margin-bottom: 10%;
       color: @text-color;
       padding: 10px;
-      background-color: @greyscale;
-      box-shadow: 0 2px 17px 0 rgba(0,0,0,0.5);
+      // background-color: @greyscale;
+      // box-shadow: 0 2px 17px 0 rgba(0,0,0,0.5);
 
       @media @desktop {
         display: flex;
@@ -116,6 +103,7 @@
         font-weight: bold;
         letter-spacing: 2px;
         margin: 10px;
+        color: @greyscale;
       }
 
       .card-container {
@@ -130,7 +118,7 @@
           margin: 2px;
           padding: 5%;
           border-radius: 5px;
-          border: 1px solid gray;
+          // border: 1px solid gray;
           transition: 0.2s ease-in-out;
 
           &:hover {
@@ -144,7 +132,8 @@
           p {
             text-align: center;
             padding-top: 20px;
-            font-size: 1.5rem;
+            font-size: @text-font;
+            color: @greyscale;
           }
         }
       }
