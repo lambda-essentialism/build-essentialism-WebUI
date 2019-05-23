@@ -13,8 +13,9 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script defer src="./Components/Nav/Nav.js"></script>
+  <script defer src="script/main.js"></script>
   <script defer src="./Components/About/About.js"></script>
   <script defer src="./Components/Gallery/Gallery.js"></script>
 </head>
@@ -28,7 +29,8 @@
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link active" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
-        <a class="nav-link login" href="#">Login</a>
+        <a class="nav-link login" href="#">Sign In</a>
+        <a class="nav-link join" href="#">Join</a>
       </nav>
     </header>
     <div class="container">
@@ -37,9 +39,10 @@
       </div>
 
       <section class="about-container">
+        <h2>About Us</h2>
         <div class="main-about" data-aos="fade-up" data-aos-delay="200">
           <div class="img-content">
-            <img src="./assets/mindfulness.svg" alt="">
+            <img src="./assets/why.svg" alt="">
           </div>
           <div class="text-content">
             <h2>Why Essentialism?</h2>
@@ -49,7 +52,7 @@
         </div>
         <div class="main-about" data-aos="fade-up" data-aos-delay="200">
           <div class="img-content">
-            <img src="./assets/mindfulness.svg" alt="">
+            <img src="./assets/we_started.svg" alt="">
           </div>
           <div class="text-content">
             <h2>Why We Started</h2>
@@ -59,7 +62,7 @@
         </div>
         <div class="main-about" data-aos="fade-up" data-aos-delay="200">
           <div class="img-content">
-            <img src="./assets/mindfulness.svg" alt="">
+            <img src="./assets/who_are_we.svg" alt="">
           </div>
           <div class="text-content">
             <h2>Who We Are</h2>
@@ -92,7 +95,6 @@
       </section>
     </div>
   </div>
-  </header>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
