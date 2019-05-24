@@ -6,7 +6,6 @@
   border-radius: 5px;
 
   .item {
-    border: 1px solid @primary-color;
     font-size: @small-font;
   }
 }
@@ -15,8 +14,13 @@
   margin-top: 20%;
 
   @media @desktop {
-    margin-top: 10%;
     background-color: transparent;
+  }
+
+  h2 {
+    color: @text-color;
+    font-size: @medium-font;
+    font-weight: bold;
   }
 
   .main-about {
@@ -26,7 +30,8 @@
     flex-direction: column;
 
     @media @desktop {
-      margin-top: 30%;
+      margin-top: 15%;
+      margin-bottom: 20%;
       flex-direction: row;
       padding-right: 30%;
     }
@@ -34,10 +39,17 @@
     .img-content {
       display: flex;
       align-items: center;
-      width: 30%;
-
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 10px;
+      
+      @media @desktop {
+        width: 30%;
+      }
+      
       img {
-        display: none;
+        display: inherit;
+        width: 100%;
 
         @media @desktop {
           width: 100%;
@@ -48,25 +60,31 @@
 
     .text-content {
       width: 100%;
+      line-height: 29px;
       border: 1px solid @greyscale;
       border-radius: 5px;
-      padding: 5px;
+      padding: 10px;
+      // box-shadow: 0 2px 17px 0 rgba(247, 226, 112, 0.5);
+      background-color: @greyscale;
 
       @media @desktop {
         width: 70%;
         margin-left: 5%;
-        padding: 5px;
+        padding: 15px;
       }
     }
 
     h2 {
       font-size: @medium-font;
       padding: 8px 0;
+      color: @text-color;
       font-weight: bold;
     }
 
     p {
-      font-size: @text-font;
+      font-size: @small-font;
+      color: @text-color;
+      text-align: justify;
     }
   }
 }

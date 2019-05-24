@@ -1,17 +1,23 @@
 #team {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  width: 100%;
   padding-right: 0;
+
+  h2 {
+    text-align: center;
+  }
   
   .gallery {
     display: flex;
+    box-shadow: 0 2px 17px 0 rgba(0,0,0,0.5);
     flex-wrap: wrap;
-    border: 1px solid @greyscale;
-    justify-content: space-between;
+    background-color: @greyscale;
+    justify-content: space-around;
     border-radius: 3px;
-    padding: 10%;
     width: 100%;
+    padding-top: 5%;
+    margin-bottom: 50px;
 
     .member {
       width: 250px;
@@ -33,12 +39,19 @@
 
       .info {
         justify-self: flex-end;
+        color: @text-color;
 
         .name {
           text-align: center;
           font-weight: bold;
           padding-bottom: 5px;
           font-size: @small-font;
+          
+          a {
+            text-decoration: none;
+            padding: 10px;
+            color: @primary-color;
+          }
         }
 
         .role {
