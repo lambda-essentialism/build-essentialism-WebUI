@@ -516,19 +516,19 @@ body {
   flex-direction: column;
   width: 100%;
   padding-right: 0;
+  padding-top: 2%;
+  background-color: #fcf9ED;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
 }
 #team h2 {
   text-align: center;
 }
 #team .gallery {
   display: flex;
-  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.5);
   flex-wrap: wrap;
-  background-color: #fcf9ED;
   justify-content: space-around;
   border-radius: 3px;
   width: 100%;
-  padding-top: 5%;
   margin-bottom: 50px;
 }
 #team .gallery .member {

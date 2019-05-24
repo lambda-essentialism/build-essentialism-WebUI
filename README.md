@@ -18,7 +18,7 @@ In a world with everything shouting for you attention, the disciplined pursuit o
 - Animations: GreenSock and AOS (Animate on Scroll)
 
 ## Host: 
-  - [`https://esse.netlify.com/index.html`](https://esse.netlify.com/index.html)
+  - [`https://esse.netlify.com`](https://esse.netlify.com)
   
 
 ## Project Notes
